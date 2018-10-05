@@ -3,6 +3,7 @@
 using namespace std;
 void display(int N,int start,int** edge,bool* visited,int* path)
 {
+	//checking if visited[start] is true 
 	visited[start]=true;
 	if(start==dist)
 	{
@@ -14,6 +15,7 @@ void display(int N,int start,int** edge,bool* visited,int* path)
 		{
 			continue;
 		}
+		// checking for if edge is there or not
 		if(edge[start][i]==1)
 		{
 			if(visited[i])
@@ -44,6 +46,7 @@ int main()
 			edge[i][j]=0;
 		}
 	}
+	//starting point and end point.
 	for(int i=0;i<E;i++)
 	{
 		cout<<"enter start and end point";
